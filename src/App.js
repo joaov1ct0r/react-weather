@@ -35,6 +35,7 @@ function App() {
                 <button onClick={handleSearch} type="submit">
                     Pesquisar
                 </button>
+                <div className="data-container"></div>
             </div>
         </div>
     );
