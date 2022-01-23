@@ -1,5 +1,7 @@
 import './App.css';
 
+import { FiSearch } from 'react-icons/fi';
+
 import { useState } from 'react';
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
                     name="inputCity"
                 />
                 <button onClick={handleSearch} type="submit">
-                    Pesquisar
+                    <FiSearch size={25} color="#FFF"></FiSearch>
                 </button>
                 {Object.keys(ApiData).length > 0 && (
                     <div className="data-container">
