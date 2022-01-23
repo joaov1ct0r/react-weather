@@ -20,9 +20,8 @@ body {
 }
 
 .form-container input {
-    width: 250px;
+    width: 310px;
     height: 25px;
-    margin-right: 8px;
     outline: none;
     border: none;
     background-color: transparent;
