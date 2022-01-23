@@ -14,9 +14,13 @@ function App() {
 
         const URL = `http://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`;
 
-        fetch(URL).then(res => {
-            console.log(res.json());
-        });
+        fetch(URL)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                console.log(data);
+            });
     }
     return (
         <div className="App">
