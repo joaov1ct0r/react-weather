@@ -3,7 +3,11 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-            <div className="form-container"></div>
+            <h1>Weather App</h1>
+            <div className="form-container">
+                <input type="text" placeholder="Localização" name="inputCity" />
+                <button type="submit">Pesquisar</button>
+            </div>
         </div>
     );
 }
