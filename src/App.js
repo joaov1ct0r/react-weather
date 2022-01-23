@@ -45,9 +45,9 @@ function App() {
                             alt="weather-icon"
                         ></img>
                         <p>
-                            Local: {ApiData.name} - {ApiData.sys.country}
+                            {ApiData.name} - {ApiData.sys.country}
                         </p>
-                        <p>{ApiData.weather[0].main}</p>
+                        <p>Local: {ApiData.weather[0].main}</p>
                         <p>Descrição: {ApiData.weather[0].description}</p>
                         <p>Temperatura: {ApiData.main.temp}</p>
                         <p>Temperatura maxima: {ApiData.main.temp_max}</p>
