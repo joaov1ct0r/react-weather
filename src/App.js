@@ -14,18 +14,22 @@ function App() {
     }
 
     function handleSearch() {
-        const API_KEY = '11793562357b04c38a206416e8384ea1';
+        try {
+            const API_KEY = '11793562357b04c38a206416e8384ea1';
 
-        const URL = `http://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`;
+            const URL = `http://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`;
 
-        fetch(URL)
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                console.log(data);
-                setApiData(data);
-            });
+            fetch(URL)
+                .then(res => {
+                    return res.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    setApiData(data);
+                });
+        } catch {
+            alert('Houve algum erro!');
+        }
     }
     return (
         <div className="App">
@@ -43,7 +47,7 @@ function App() {
                 {Object.keys(ApiData).length > 0 && (
                     <div className="data-container">
                         <img
-                            src="./assets/${ApiData.weather[0].icon}"
+                            src="./assets/{ApiData.weather[0].icon}"
                             alt="weather-icon"
                         ></img>
                         <p>
