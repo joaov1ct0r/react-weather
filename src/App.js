@@ -38,7 +38,7 @@ function App() {
                     name="inputCity"
                 />
                 <button onClick={handleSearch} type="submit">
-                    <FiSearch size={25} color="#FFF"></FiSearch>
+                    <FiSearch size={20} color="#000000"></FiSearch>
                 </button>
                 {Object.keys(ApiData).length > 0 && (
                     <div className="data-container">
