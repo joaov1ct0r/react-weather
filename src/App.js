@@ -35,7 +35,18 @@ function App() {
                 <button onClick={handleSearch} type="submit">
                     Pesquisar
                 </button>
-                <div className="data-container"></div>
+                <div className="data-container">
+                    <p>Sensação termica: 277</p>
+                    <p>Humidade: 82</p>
+                    <p>Temperatura: 270</p>
+                    <p>Temperatura maxima: 288</p>
+                    <p>Temperatura maxima: 278</p>
+                    <p>Cidade: Paris</p>
+                    <p>País: FR</p>
+                    <p>Tempo: Nuvem</p>
+                    <p>Descrição: Overcast Clouds</p>
+                    <p>Icon 04n</p>
+                </div>
             </div>
         </div>
     );
