@@ -55,11 +55,23 @@ function App() {
                         </p>
                         <p>Tempo: {ApiData.weather[0].main}</p>
                         <p>Descrição: {ApiData.weather[0].description}</p>
-                        <p>Temperatura: {ApiData.main.temp}</p>
-                        <p>Temperatura maxima: {ApiData.main.temp_max}</p>
-                        <p>Temperatura minima: {ApiData.main.temp_min}</p>
-                        <p>Sensação termica: {ApiData.main.feels_like}</p>
-                        <p>Humidade: {ApiData.main.humidity}</p>
+                        <p>
+                            Temperatura:{' '}
+                            {(ApiData.main.temp - 273.15).toFixed()}°C
+                        </p>
+                        <p>
+                            Temperatura maxima:{' '}
+                            {(ApiData.main.temp_max - 273.15).toFixed()} °C
+                        </p>
+                        <p>
+                            Temperatura minima:{' '}
+                            {(ApiData.main.temp_min - 273.15).toFixed()} °C
+                        </p>
+                        <p>
+                            Sensação termica:{' '}
+                            {(ApiData.main.feels_like - 273.15).toFixed()} °C
+                        </p>
+                        <p>Humidade: {ApiData.main.humidity}%</p>
                     </div>
                 )}
             </div>
