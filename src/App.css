@@ -30,6 +30,12 @@ body {
     color: white;
 }
 
+.form-container button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 .data-container {
     background-color: white;
     border-radius: 10px;
