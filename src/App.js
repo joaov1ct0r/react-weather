@@ -53,7 +53,7 @@ function App() {
                         <p>
                             {ApiData.name} - {ApiData.sys.country}
                         </p>
-                        <p>Local: {ApiData.weather[0].main}</p>
+                        <p>Tempo: {ApiData.weather[0].main}</p>
                         <p>Descrição: {ApiData.weather[0].description}</p>
                         <p>Temperatura: {ApiData.main.temp}</p>
                         <p>Temperatura maxima: {ApiData.main.temp_max}</p>
