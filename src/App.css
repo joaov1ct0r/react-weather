@@ -14,8 +14,20 @@ body {
 }
 
 .form-container {
-    max-width: 300px;
+    max-width: 350px;
     margin: auto;
+}
+
+.form-container input {
+    width: 250px;
+    height: 25px;
+    margin-right: 8px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    color: white;
 }
 
 .data-container {
