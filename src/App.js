@@ -5,6 +5,8 @@ import { useState } from 'react';
 function App() {
     let [City, setCity] = useState('');
 
+    let [ApiData, setApiData] = useState({});
+
     function handleCity(event) {
         setCity(event.target.value);
     }
@@ -20,6 +22,7 @@ function App() {
             })
             .then(data => {
                 console.log(data);
+                setApiData(data);
             });
     }
     return (
@@ -35,18 +38,20 @@ function App() {
                 <button onClick={handleSearch} type="submit">
                     Pesquisar
                 </button>
-                <div className="data-container">
-                    <p>Sensação termica: 277</p>
-                    <p>Humidade: 82</p>
-                    <p>Temperatura: 270</p>
-                    <p>Temperatura maxima: 288</p>
-                    <p>Temperatura maxima: 278</p>
-                    <p>Cidade: Paris</p>
-                    <p>País: FR</p>
-                    <p>Tempo: Nuvem</p>
-                    <p>Descrição: Overcast Clouds</p>
-                    <p>Icon 04n</p>
-                </div>
+                {Object.keys(ApiData).length > 0 && (
+                    <div className="data-container">
+                        <p>Sensação termica: {ApiData.main.feels_like}</p>
+                        <p>Humidade: {ApiData.main.humidity}</p>
+                        <p>Temperatura: {ApiData.main.temp}</p>
+                        <p>Temperatura maxima: {ApiData.main.temp_max}</p>
+                        <p>Temperatura minima: {ApiData.main.temp_min}</p>
+                        <p>Cidade: {ApiData.name}</p>
+                        <p>País: {ApiData.sys.country}</p>
+                        <p>Tempo: {ApiData.weather[0].main}</p>
+                        <p>Descrição: {ApiData.weather[0].description}</p>
+                        <p>Icon: {ApiData.weather[0].icon}</p>
+                    </div>
+                )}
             </div>
         </div>
     );
