@@ -8,6 +8,16 @@ function App() {
     function handleCity(event) {
         setCity(event.target.value);
     }
+
+    function handleSearch() {
+        const API_KEY = '11793562357b04c38a206416e8384ea1';
+
+        const URL = `http://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`;
+
+        fetch(URL).then(res => {
+            console.log(res.json());
+        });
+    }
     return (
         <div className="App">
             <h1>Weather App</h1>
@@ -18,7 +28,9 @@ function App() {
                     placeholder="Localização"
                     name="inputCity"
                 />
-                <button type="submit">Pesquisar</button>
+                <button onClick={handleSearch} type="submit">
+                    Pesquisar
+                </button>
             </div>
         </div>
     );
