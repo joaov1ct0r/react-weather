@@ -40,16 +40,20 @@ function App() {
                 </button>
                 {Object.keys(ApiData).length > 0 && (
                     <div className="data-container">
-                        <p>Sensação termica: {ApiData.main.feels_like}</p>
-                        <p>Humidade: {ApiData.main.humidity}</p>
+                        <img
+                            src="./assets/${ApiData.weather[0].icon}"
+                            alt="weather-icon"
+                        ></img>
+                        <p>
+                            Local: {ApiData.name} - {ApiData.sys.country}
+                        </p>
+                        <p>{ApiData.weather[0].main}</p>
+                        <p>Descrição: {ApiData.weather[0].description}</p>
                         <p>Temperatura: {ApiData.main.temp}</p>
                         <p>Temperatura maxima: {ApiData.main.temp_max}</p>
                         <p>Temperatura minima: {ApiData.main.temp_min}</p>
-                        <p>Cidade: {ApiData.name}</p>
-                        <p>País: {ApiData.sys.country}</p>
-                        <p>Tempo: {ApiData.weather[0].main}</p>
-                        <p>Descrição: {ApiData.weather[0].description}</p>
-                        <p>Icon: {ApiData.weather[0].icon}</p>
+                        <p>Sensação termica: {ApiData.main.feels_like}</p>
+                        <p>Humidade: {ApiData.main.humidity}</p>
                     </div>
                 )}
             </div>
