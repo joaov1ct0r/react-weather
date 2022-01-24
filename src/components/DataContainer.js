@@ -1,8 +1,6 @@
 import MainLogo from '../assets/icons/unknown.png';
 
 function DataContainer(props) {
-    const IMG_FILE = `../assets/icons/${props.ApiData.weather[0].icon}.png`;
-
     return (
         <div className="data-container">
             <img
