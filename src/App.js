@@ -4,6 +4,8 @@ import { FiSearch } from 'react-icons/fi';
 
 import { useState } from 'react';
 
+import DataContainer from './components/DataContainer';
+
 function App() {
     let [City, setCity] = useState('');
 
@@ -45,34 +47,7 @@ function App() {
                     <FiSearch size={20} color="#FFF"></FiSearch>
                 </button>
                 {Object.keys(ApiData).length > 0 && (
-                    <div className="data-container">
-                        <img
-                            src="./assets/{ApiData.weather[0].icon}"
-                            alt="weather-icon"
-                        ></img>
-                        <p>
-                            {ApiData.name} - {ApiData.sys.country}
-                        </p>
-                        <p>Tempo: {ApiData.weather[0].main}</p>
-                        <p>Descrição: {ApiData.weather[0].description}</p>
-                        <p>
-                            Temperatura:{' '}
-                            {(ApiData.main.temp - 273.15).toFixed()}°C
-                        </p>
-                        <p>
-                            Temperatura maxima:{' '}
-                            {(ApiData.main.temp_max - 273.15).toFixed()} °C
-                        </p>
-                        <p>
-                            Temperatura minima:{' '}
-                            {(ApiData.main.temp_min - 273.15).toFixed()} °C
-                        </p>
-                        <p>
-                            Sensação termica:{' '}
-                            {(ApiData.main.feels_like - 273.15).toFixed()} °C
-                        </p>
-                        <p>Humidade: {ApiData.main.humidity}%</p>
-                    </div>
+                    <DataContainer ApiData={ApiData}></DataContainer>
                 )}
             </div>
         </div>
