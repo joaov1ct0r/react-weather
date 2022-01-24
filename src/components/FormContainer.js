@@ -2,7 +2,7 @@ import { FiSearch } from 'react-icons/fi';
 
 import { useState } from 'react';
 
-import DataContainer from './components/DataContainer';
+import DataContainer from './DataContainer';
 
 function FormContainer(props) {
     let [City, setCity] = useState('');
