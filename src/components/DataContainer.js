@@ -1,7 +1,6 @@
 function DataContainer(props) {
     const IMG_FILE = `../assets/icons/${props.ApiData.weather[0].icon}.png`;
 
-    console.log(IMG_FILE);
     return (
         <div className="data-container">
             <img

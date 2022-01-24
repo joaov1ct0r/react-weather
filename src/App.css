@@ -37,6 +37,7 @@ body {
 }
 
 .data-container {
+    width: 600px;
     margin-top: 10%;
     background-color: white;
     border-radius: 10px;
@@ -44,8 +45,7 @@ body {
 
 .data-container .weatherIcon {
     display: block;
-    height: 40%;
-    width: 150px;
+    height: 30%;
+    width: 100px;
     margin: auto;
-    padding-top: 5%;
 }
