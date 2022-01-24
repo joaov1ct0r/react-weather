@@ -1,3 +1,5 @@
+import MainLogo from '../assets/icons/unknown.png';
+
 function DataContainer(props) {
     const IMG_FILE = `../assets/icons/${props.ApiData.weather[0].icon}.png`;
 
@@ -5,7 +7,7 @@ function DataContainer(props) {
         <div className="data-container">
             <img
                 className="weatherIcon"
-                src={IMG_FILE}
+                src={MainLogo}
                 alt="weather-icon"
             ></img>
             <p>
