@@ -41,3 +41,11 @@ body {
     background-color: white;
     border-radius: 10px;
 }
+
+.data-container .weatherIcon {
+    display: block;
+    height: 40%;
+    width: 150px;
+    margin: auto;
+    padding-top: 5%;
+}
