@@ -1,5 +1,3 @@
-import MainLogo from '../assets/icons/unknown.png';
-
 function DataContainer(props) {
     return (
         <div className="data-container">
