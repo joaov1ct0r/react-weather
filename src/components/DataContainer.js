@@ -12,8 +12,12 @@ function DataContainer(props) {
             <h3>
                 Temperatura: {(props.ApiData.main.temp - 273.15).toFixed()}°C
             </h3>
-            <h4>{props.ApiData.weather[0].main}</h4>
-            <h5>{props.ApiData.weather[0].description}</h5>
+            <h3>
+                {(props.ApiData.main.temp_min - 273.15).toFixed()} |{' '}
+                {(props.ApiData.main.temp_max - 273.15).toFixed()}
+            </h3>
+            <h3>{props.ApiData.weather[0].main}</h3>
+            <h4>{props.ApiData.weather[0].description}</h4>
         </div>
     );
 }
