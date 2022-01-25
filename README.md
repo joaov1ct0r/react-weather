@@ -12,7 +12,7 @@
   <p><code>sudo apt install npm</code></p>
   <br>
   <li>React</li>
-  <p><code>npx create-react-app react-coin</code></p>
+  <p><code>npx create-react-app react-weather</code></p>
   <br>
   <li>Dependencias</li>
   <p><code>npm install</code></p>
