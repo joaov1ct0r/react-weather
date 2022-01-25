@@ -44,3 +44,5 @@
 <p>A PAGINA DO WEATHER APP SERA ABERTA E VOCÊ PODERA FAZER A PESQUISA DE COMO ESTA O CLIMA EM OUTRAS CIDADES.</p>
 
 <h2>Picture</h2>
+
+![weatherreact](https://user-images.githubusercontent.com/79015823/151046336-177768e0-537b-4a37-88a6-c93655e8df80.jpg)
