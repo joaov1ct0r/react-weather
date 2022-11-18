@@ -3,7 +3,9 @@
     "target": "ES6",
     "module": "CommonJS",
     "lib": [
-      "es6"
+      "es6",
+      "DOM",
+      "DOM.Iterable",
     ],
     "allowJs": true,
     "outDir": "build",
