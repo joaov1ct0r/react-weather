@@ -1,9 +1,5 @@
-import React from 'react';
 import IApiData from "../interfaces/IApiData";
-
-interface IDataContainerProps {
-  ApiData: IApiData | null;
-}
+import IDataContainerProps from "../interfaces/IDataContainerProps";
 
 function DataContainer({ ApiData }: IDataContainerProps): JSX.Element {
     if (ApiData === null) {
