@@ -16,9 +16,9 @@ function FormContainer(): JSX.Element {
         try {
             const URL: string = `${process.env.API_URL}?q=${City}&appid=${process.env.API_KEY}`;
 
-            const response = await fetch(URL);
+            const response: Response = await fetch(URL);
 
-            const data = await response.json();
+            const data: IApiData = await response.json();
 
             setApiData(data);
         } catch (error: any){
