@@ -7,7 +7,7 @@ import FormSearchButton from "./FormSearchButton"
 function FormContainer(): JSX.Element {
     let [City, setCity] = useState<string>('');
 
-    let [ApiData, setApiData] = useState<IApiData | {}>({});
+    let [ApiData, setApiData] = useState<IApiData | null>(null);
 
     function handleCity(event: React.ChangeEvent<HTMLInputElement>): void {
         setCity(event.target.value);
@@ -30,9 +30,7 @@ function FormContainer(): JSX.Element {
         <div className="form-container">
             <FormCityInput handleCity={handleCity} />
             <FormSearchButton handleSearch={handleSearch} />
-            {Object.keys(ApiData).length > 0 && (
-                <DataContainer ApiData={ApiData}></DataContainer>
-            )}
+            {ApiData === null ? <></> : <DataContainer ApiData={ApiData} /> }
         </div>
     );
 }
