@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
 import DataContainer from './DataContainer';
 import IApiData from '../interfaces/IApiData';
 import FormCityInput from "./FormCityInput";
+import FormSearchButton from "./FormSearchButton"
 
 function FormContainer(): JSX.Element {
     let [City, setCity] = useState<string>('');
@@ -29,9 +29,7 @@ function FormContainer(): JSX.Element {
     return (
         <div className="form-container">
             <FormCityInput handleCity={handleCity} />
-            <button onClick={handleSearch} type="submit">
-                <FiSearch size={20} color="#FFF"></FiSearch>
-            </button>
+            <FormSearchButton handleSearch={handleSearch} />
             {Object.keys(ApiData).length > 0 && (
                 <DataContainer ApiData={ApiData}></DataContainer>
             )}
