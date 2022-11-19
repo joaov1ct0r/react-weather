@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiSearch } from 'react-icons/fi';
 import IFormSearchButtonProps from '../interfaces/IFormSearchButtonProps';
 

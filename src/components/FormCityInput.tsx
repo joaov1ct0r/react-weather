@@ -1,4 +1,3 @@
-import React from 'react';
 import IFormCityInputProps from '../interfaces/IFormCityInputProps';
 
 function FormCityInput ({ handleCity }: IFormCityInputProps): JSX.Element {
