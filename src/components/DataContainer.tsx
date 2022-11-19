@@ -1,4 +1,3 @@
-import IApiData from "../interfaces/IApiData";
 import IDataContainerProps from "../interfaces/IDataContainerProps";
 
 function DataContainer({ ApiData }: IDataContainerProps): JSX.Element {
