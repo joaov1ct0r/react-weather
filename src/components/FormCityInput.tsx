@@ -1,8 +1,5 @@
 import React from 'react';
-
-interface IFormCityInputProps {
-  handleCity: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import IFormCityInputProps from '../interfaces/IFormCityInputProps';
 
 function FormCityInput ({ handleCity }: IFormCityInputProps): JSX.Element {
   return (
