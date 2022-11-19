@@ -1,11 +1,17 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
-        "standard", "prettier"
+        "standard", "prettier",
+        "prettier/@typescript-eslint",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/standard",
+        "prettier/react"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
