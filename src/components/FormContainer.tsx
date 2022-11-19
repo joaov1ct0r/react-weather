@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import DataContainer from './DataContainer';
 import IApiData from '../interfaces/IApiData';
+import FormCityInput from "./FormCityInput";
 
 function FormContainer(): JSX.Element {
     let [City, setCity] = useState<string>('');
@@ -27,12 +28,7 @@ function FormContainer(): JSX.Element {
     }
     return (
         <div className="form-container">
-            <input
-                onChange={handleCity}
-                type="text"
-                placeholder="Localização"
-                name="inputCity"
-            />
+            <FormCityInput handleCity={handleCity} />
             <button onClick={handleSearch} type="submit">
                 <FiSearch size={20} color="#FFF"></FiSearch>
             </button>
