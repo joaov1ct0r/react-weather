@@ -1,9 +1,6 @@
 import React from 'react';
 import { FiSearch } from 'react-icons/fi';
-
-interface IFormSearchButtonProps {
-  handleSearch (): Promise<void> 
-}
+import IFormSearchButtonProps from '../interfaces/IFormSearchButtonProps';
 
 function FormSearchButton ({ handleSearch}: IFormSearchButtonProps): JSX.Element {
   return (
