@@ -4,7 +4,7 @@ import './App.css';
 import IApiData from './interfaces/IApiData';
 
 function App() {
-  let [City, setCity] = useState<string>('');
+    let [City, setCity] = useState<string>('');
 
     let [ApiData, setApiData] = useState<IApiData | null>(null);
 
@@ -14,17 +14,15 @@ function App() {
 
     async function handleSearch(): Promise<void> {
         try {
-            const URL: string = `${process.env.API_URL}?q=${City}&appid=${process.env.API_KEY}`;
+            const URL: string = `${process.env.REACT_APP_API_URL}?q=${City}&appid=${process.env.REACT_APP_API_KEY}`;
 
             const request: Response = await fetch(URL);
 
-            const response = await request.json();
+            const response: IApiData = await request.json();
 
-            const data: IApiData = response.body;
-
-            setApiData(data);
+            setApiData(response);
         } catch (error: any){
-            throw new Error(error);
+           console.log(error)
         }
     }
     return (
@@ -47,7 +45,7 @@ function App() {
                 {ApiData.name} - {ApiData.sys.country}
             </h2>
             <img
-                src={require(`../assets/icons/${ApiData.weather[0].icon}.png`)}
+                src={require(`./assets/icons/${ApiData.weather[0].icon}.png`)}
                 alt="weather-icon"
             ></img>
             <h3>

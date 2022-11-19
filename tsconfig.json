@@ -30,8 +30,11 @@
   },
   "exclude": [
     "./node_modules",
+    "./src/assets"
   ],
   "include": [
-    "./src/**/*.ts"
-, "src/index.tsx"  ]
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "src/index.tsx"  
+  ]
 }
