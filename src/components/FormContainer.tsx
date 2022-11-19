@@ -1,51 +1,7 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import DataContainer from './DataContainer';
-
-interface IApiData {
-  coord: {
-    lon: number,
-    lat: number,
-  },
-  weather: {
-    0: {
-      id: number,
-      main: string,
-      description: string,
-      icon: string,
-    }
-  },
-  base: string,
-  main: {
-    temp: number,
-    feels_like: number,
-    temp_min: number,
-    temp_max: number,
-    pressure: number,
-    humidity: number,
-
-  },
-  visibility: number,
-  wind: {
-    speed: number,
-    deg: number,
-  },
-  clouds: {
-    all: number,
-  },
-  dt: number,
-  sys: {
-    type: number,
-    id: number,
-    country: string,
-    sunrise: number,
-    sunset: number,
-  },
-  timezone: number,
-  id: number,
-  name: string,
-  cod: number,
-}
+import IApiData from '../interfaces/IApiData';
 
 function FormContainer(): JSX.Element {
     let [City, setCity] = useState<string>('');
