@@ -2,48 +2,48 @@
 
 <h1>EM DESENVOLVIMENTO</h1>
 
-<h2>Sobre</h2>
-
-<p>Web App de Temperatura feito em JavaScript utilizando a biblioteca ReactJS com TypeScript, ao iniciar o servidor a pagina sera iniciada no localhost, Com um input de texto para procurar a cidade e o botão de busca, ao inserir a cidade e pressionar o botão de busca, uma requisição é feita a Api da OpenWeather, Quando a resposta retornar os dados da api serão inseridos em uma div que aparecera na tela abaixo do input e do botão.</p>
-
-<p>Sistema criado em container docker com ambientes de produção e desenvolvimento criados em containers Docker utilizando Dockerfile para multi stage building e Docker Compose para orquestração de containers.</p>
-
 <h2>Requisitos</h2>
 
 <ul>
+  <li>NodeJS</li>
+  <p><code>sudo apt install nodejs</code></p>
+  <br>
   <li>NPM</li>
+  <p><code>sudo apt install npm</code></p>
   <br>
-  <li>Docker</li>
+  <li>React</li>
+  <p><code>npx create-react-app react-weather</code></p>
   <br>
-  <li>Docker Compose</li>
+  <li>Dependencias</li>
+  <p><code>npm install</code></p>
   <br>
 </ul>
+
+<h2>Sobre</h2>
+
+<p>App de Temperatura feito em ReactJS.</p>
+
+<p>Ao iniciar o servidor a pagina sera iniciada no localhost, Com um input de texto para procurar a cidade e o botão de busca.</p>
+
+<p>Ao inserir a cidade e pressionar o botão de busca, uma requisição é feita a Api da OpenWeather.</p>
+
+<p>Quando a resposta retornar os dados da api serão inseridos em uma div que aparecera na tela abaixo do input e do botão.</p>
 
 <h2>MODO DE USO</h2>
 
 <h3>GIT</h3>
 
-<p>FAÇA O DOWNLOAD DO REPOSITORIO OU USE SSH:<br><code>git pull git@github.com:joaov1ct0r/react-weather.git</code></p>
+<p>FAÇA O DOWNLOADS DO REPOSITORIO OU USE:<br><code>git@github.com:joaov1ct0r/react-weather.git</code></p>
 
-<h3>VARIAVEIS DE AMBIENTE</h3>
-<hr>
+<h3>INICIE O SERVER</h3>
 
-<p>ABRA O ARQUIVO .env E ALTERE AS VARIAVEIS DE AMBIENTE COM SEUS DADOS</p>
+<p>APOS TER OS ARQUIVOS EM SUA MAQUINA DIRECIONE-SE PARA O DIRETORIO DO REPOSITORIO E INICIE O SERVIDOR WEB NO SEU TERMINAL COM O COMANDO:<br><code>npm start</code></p>
 
-<ul>
-  <li>REACT_APP_API_KEY = SUA CHAVE PARA A API DA OPEN WEATHER</li>
-  <li>REACT_APP_API_URL = URL PARA A API DA OPEN WEATHER</li>
-  <li>REACT_APP_NODE_ENV = VARIAVEL DE AMBIENTE DO SEU NODE</li>
-</ul>
+<p>APOS ISSO UMA NOVA ABA SERA ABERTA</p>
 
-<h3>SERVER</h3>
-<hr>
-
-<p>APOS TER OS ARQUIVOS EM SUA MAQUINA ESCOLHA O MODO EM QUE QUER RODAR O PROJETO:
-  <br>PRODUÇÃO: <code>sudo docker compose up --build -d</code>
-
-<br>DESENVOLVIMENTO: <code>sudo docker compose -f docker-compose.dev.yaml up --build -d</code>
-
+<p>A PAGINA DO WEATHER APP SERA ABERTA E VOCÊ PODERA FAZER A PESQUISA DE COMO ESTA O CLIMA EM OUTRAS CIDADES.</p>
 </p>
 
 <h2>Picture</h2>
+
+![weatherreact](https://user-images.githubusercontent.com/79015823/151046336-177768e0-537b-4a37-88a6-c93655e8df80.jpg)
