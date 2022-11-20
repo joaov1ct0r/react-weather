@@ -8,7 +8,7 @@ function DataContainer ({ApiData}: IDataContainerProps): JSX.Element {
         {ApiData.name} - {ApiData.sys.country}
       </h2>
       <img
-        src={require(`./assets/icons/${ApiData.weather[0].icon}.png`)}
+        src={require(`../assets/icons/${ApiData.weather[0].icon}.png`)}
         alt="weather-icon"
       ></img>
       <h3>
