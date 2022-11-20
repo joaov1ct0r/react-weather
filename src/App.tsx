@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
 import './App.css';
 import IApiData from './interfaces/IApiData';
+import FormContainer from './components/FormContainer.';
 
 function App() {
     let [City, setCity] = useState<string>('');
@@ -28,17 +28,7 @@ function App() {
     return (
         <div className="App">
           <h1>Weather App</h1>
-          <div className="form-container">
-              <input
-                onChange={handleCity}
-                type="text"
-                placeholder="Localização"
-                name="inputCity"
-              />
-              <button onClick={handleSearch} type="submit">
-                <FiSearch size={20} color="#FFF"></FiSearch>
-              </button>
-          </div>
+          <FormContainer handleCity={handleCity} handleSearch={handleSearch} />
           { ApiData === null ? <></> :
           <div className="data-container">
             <h2>
