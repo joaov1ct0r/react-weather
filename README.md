@@ -6,6 +6,8 @@
 
 <p>Web App de Temperatura feito em JavaScript utilizando a biblioteca ReactJS com TypeScript, ao iniciar o servidor a pagina sera iniciada no localhost, Com um input de texto para procurar a cidade e o botão de busca, ao inserir a cidade e pressionar o botão de busca, uma requisição é feita a Api da OpenWeather, Quando a resposta retornar os dados da api serão inseridos em uma div que aparecera na tela abaixo do input e do botão.</p>
 
+<p>Testes Unitarios e de integração feitos com Jest e Testing Library.</p>
+
 <p>Sistema criado em container docker com ambientes de produção e desenvolvimento criados em containers Docker utilizando Dockerfile para multi stage building e Docker Compose para orquestração de containers.</p>
 
 <h2>Requisitos</h2>
