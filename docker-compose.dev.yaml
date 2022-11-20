@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  react-weather:
+    container_name: react-weather_dev
+    build:
+      args:
+        - NODE_ENV='development'
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    image: react-weather_dev
+    entrypoint: ["/bin/sh", "./src/scripts/entrypoint_dev.sh"]
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV='development'
+    restart: always
+    ports:
+      - 3000:3000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
