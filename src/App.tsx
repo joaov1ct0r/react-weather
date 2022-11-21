@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./styles/App.css";
 import IApiData from "./interfaces/IApiData";
 import FormContainer from "./components/FormContainer.";
 import DataContainer from "./components/DataContainer";
