@@ -3,7 +3,7 @@ import IApiData from "../interfaces/IApiData";
 import IFormContextType from "../interfaces/IFormContextType";
 import IFormContextProps from "../interfaces/IFormContextProps";
 
-export const FormContext = createContext<IFormContextType | null>(null);
+export const FormContext = createContext<IFormContextType | unknown>({});
 
 export function FormProvider(props: IFormContextProps) {
   const [ApiData, setApiData] = useState<IApiData | null>(null);
