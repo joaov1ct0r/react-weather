@@ -1,7 +1,12 @@
-import React from "react";
-import IDataContainerProps from "../interfaces/IDataContainerProps";
+import React, { useContext } from "react";
+import IFormContextType from "../interfaces/IFormContextType";
+import { FormContext } from "./FormContext";
 
-function DataContainer({ ApiData }: IDataContainerProps): JSX.Element {
+function DataContainer(): JSX.Element {
+  const { ApiData } = useContext(FormContext) as IFormContextType;
+
+  if (ApiData === null) return <></>;
+
   return (
     <div className="data-container">
       <h2>

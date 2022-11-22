@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import FormContainer from "./components/FormContainer.";
+import FormContainer from "./components/FormContainer";
 import DataContainer from "./components/DataContainer";
 import { FormProvider, FormContext } from "./components/FormContext";
 import IFormContextType from "./interfaces/IFormContextType";
