@@ -14,6 +14,8 @@ export default {
   // The glob patterns Jest uses to detect test files
   testMatch: ["**/__tests__/**/*.test.ts?(x)"],
 
+  setupFilesAfterEnv: ["<rootDir>/__tests__/setup.ts"],
+
   transform: {
     "^.+\\.(t|j)sx?$": [
       "@swc/jest",
