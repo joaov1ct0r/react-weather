@@ -14,6 +14,42 @@ export default {
   // The glob patterns Jest uses to detect test files
   testMatch: ["**/__tests__/**/*.test.ts?(x)"],
 
+  transform: {
+    "^.+\\.(t|j)sx?$": [
+      "@swc/jest",
+
+      {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+
+            tsx: true,
+
+            decorators: true,
+          },
+
+          keepClassNames: true,
+
+          transform: {
+            legacyDecorator: true,
+
+            decoratorMetadata: true,
+
+            react: {
+              runtime: "automatic",
+            },
+          },
+        },
+
+        module: {
+          type: "es6",
+
+          noInterop: false,
+        },
+      },
+    ],
+  },
+
   globals: {
     "ts-jest": {
       isolatedModules: true,
