@@ -7,7 +7,7 @@ COPY package*.json .
 
 RUN npm cache clean --force && npm cache verify
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 ADD . /usr/src/app
 
@@ -26,4 +26,4 @@ COPY --from=development /usr/src/app/build ./build
 
 COPY --from=development /usr/src/app/package*.json ./
 
-RUN npm install --omit=dev
+RUN npm install --omit=dev --legacy-peer-deps
