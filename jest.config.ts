@@ -1,4 +1,6 @@
 export default {
+  testEnvironment: "jsdom",
+
   // Stop running tests after `n` failures
   bail: true,
 
@@ -15,42 +17,6 @@ export default {
   testMatch: ["**/__tests__/**/*.test.ts?(x)"],
 
   setupFilesAfterEnv: ["<rootDir>/__tests__/setup.ts"],
-
-  transform: {
-    "^.+\\.(t|j)sx?$": [
-      "@swc/jest",
-
-      {
-        jsc: {
-          parser: {
-            syntax: "typescript",
-
-            tsx: true,
-
-            decorators: true,
-          },
-
-          keepClassNames: true,
-
-          transform: {
-            legacyDecorator: true,
-
-            decoratorMetadata: true,
-
-            react: {
-              runtime: "automatic",
-            },
-          },
-        },
-
-        module: {
-          type: "es6",
-
-          noInterop: false,
-        },
-      },
-    ],
-  },
 
   globals: {
     "ts-jest": {
