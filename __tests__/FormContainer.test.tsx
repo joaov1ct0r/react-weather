@@ -9,7 +9,7 @@ describe("form container", () => {
 
     const cityInput = screen.getByPlaceholderText("Localização");
 
-    // expect(cityInput.textContent).toBe("");
+    expect(cityInput.textContent).toBe("");
 
     expect(cityInput).toBeInTheDocument();
   });
