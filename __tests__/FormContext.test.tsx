@@ -7,6 +7,20 @@ import IFormContextProps from "../src/interfaces/IFormContextProps";
 import { act } from "react-dom/test-utils";
 
 describe("DataContainer", () => {
+  it("should render with ApiData being null", () => {
+    const wrapper = ({ children }: IFormContextProps) => (
+      <FormProvider>{children}</FormProvider>
+    );
+    const { result } = renderHook(
+      () => useContext(FormContext) as IFormContextType,
+      {
+        wrapper,
+      }
+    );
+
+    expect(result.current.ApiData).toStrictEqual(null);
+  });
+
   it("should set ApiData", () => {
     const wrapper = ({ children }: IFormContextProps) => (
       <FormProvider>{children}</FormProvider>
