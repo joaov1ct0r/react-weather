@@ -122,4 +122,18 @@ describe("DataContainer", () => {
       cod: 200,
     });
   });
+
+  it("should render with city being null", () => {
+    const wrapper = ({ children }: IFormContextProps) => (
+      <FormProvider>{children}</FormProvider>
+    );
+    const { result } = renderHook(
+      () => useContext(FormContext) as IFormContextType,
+      {
+        wrapper,
+      }
+    );
+
+    expect(result.current.City).toStrictEqual("");
+  });
 });
