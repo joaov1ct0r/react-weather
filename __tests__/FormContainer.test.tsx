@@ -9,8 +9,16 @@ describe("form container", () => {
 
     const cityInput = screen.getByPlaceholderText("Localização");
 
-    expect(cityInput.textContent).toBe("");
-
     expect(cityInput).toBeInTheDocument();
+    expect(cityInput.textContent).toBe("");
+  });
+
+  it("should initialize form input with button", () => {
+    render(<FormContainer />);
+
+    const buttonInput = screen.getByRole("button");
+
+    expect(buttonInput).toBeInTheDocument();
+    expect(buttonInput).toHaveAttribute("type", "submit");
   });
 });
