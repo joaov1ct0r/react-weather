@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "@testing-library/jest-dom";
 import { renderHook } from "@testing-library/react";
-import { FormContext, FormProvider } from "../src/components/FormContext";
-import IFormContextType from "../src/interfaces/IFormContextType";
-import IFormContextProps from "../src/interfaces/IFormContextProps";
+import { FormContext, FormProvider } from "../../src/components/FormContext";
+import IFormContextType from "../../src/interfaces/IFormContextType";
+import IFormContextProps from "../../src/interfaces/IFormContextProps";
 import { act } from "react-dom/test-utils";
 
 describe("DataContainer", () => {
