@@ -136,4 +136,22 @@ describe("DataContainer", () => {
 
     expect(result.current.City).toStrictEqual("");
   });
+
+  it("should setCity", () => {
+    const wrapper = ({ children }: IFormContextProps) => (
+      <FormProvider>{children}</FormProvider>
+    );
+    const { result } = renderHook(
+      () => useContext(FormContext) as IFormContextType,
+      {
+        wrapper,
+      }
+    );
+
+    act(() => {
+      result.current.setCity("paris");
+    });
+
+    expect(result.current.City).toStrictEqual("paris");
+  });
 });
