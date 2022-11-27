@@ -9,4 +9,10 @@ describe("App", () => {
 
     expect(screen.getByTestId("form-div")).toBeInTheDocument();
   });
+
+  it("should render fragment-div from dataContainer component", () => {
+    render(<App />);
+
+    expect(screen.getByTestId("fragment-div")).toBeInTheDocument();
+  });
 });
