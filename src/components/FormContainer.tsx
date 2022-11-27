@@ -8,7 +8,7 @@ function FormContainer(): JSX.Element {
     FormContext
   ) as IFormContextType;
   return (
-    <div className="form-container">
+    <div className="form-container" data-testid="form-div">
       <input
         onChange={handleCity}
         type="text"
