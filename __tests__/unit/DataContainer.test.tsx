@@ -10,5 +10,7 @@ describe("data container", () => {
     const fragmentDiv = screen.getByTestId("fragment-div");
 
     expect(fragmentDiv).toBeInTheDocument();
+
+    expect(screen.queryByTestId("data-div")).not.toBeInTheDocument();
   });
 });
