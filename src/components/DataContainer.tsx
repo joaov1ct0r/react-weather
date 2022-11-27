@@ -15,7 +15,7 @@ function DataContainer(): JSX.Element {
         {ApiData?.name} - {ApiData?.sys.country}
       </h2>
       <img
-        src={`public/assets/icons/${ApiData?.weather[0].icon}.png`}
+        src={require(`../../public/assets/icons/${ApiData?.weather[0].icon}.png`)}
         alt="weather-icon"
       ></img>
       <h3>Temperatura: {(ApiData?.main.temp - 273.15).toFixed()}°C</h3>
