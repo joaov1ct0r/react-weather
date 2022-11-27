@@ -14,8 +14,9 @@ function FormContainer(): JSX.Element {
         type="text"
         placeholder="Localização"
         name="inputCity"
+        data-testid="city-input"
       />
-      <button onClick={handleSearch} type="submit">
+      <button onClick={handleSearch} type="submit" data-testid="search-button">
         <FiSearch size={20} color="#FFF"></FiSearch>
       </button>
     </div>
