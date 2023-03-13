@@ -13,7 +13,7 @@
 <h2>Requisitos</h2>
 
 <ul>
-  <li>NPM</li>
+  <li>NodeJS</li>
   <br>
   <li>Docker</li>
   <br>
