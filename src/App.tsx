@@ -1,18 +1,18 @@
-import React from "react";
-import FormContainer from "./components/FormContainer";
-import DataContainer from "./components/DataContainer";
-import { FormProvider } from "./components/FormContext";
+import React from 'react'
+import FormContainer from './components/FormContainer'
+import DataContainer from './components/DataContainer'
+import { FormProvider } from './components/FormContext'
 
-function App() {
+function App () {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Weather App</h1>
       <FormProvider>
         <FormContainer />
         <DataContainer />
       </FormProvider>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
