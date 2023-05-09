@@ -3,7 +3,7 @@ import FormContainer from './components/FormContainer'
 import DataContainer from './components/DataContainer'
 import { FormProvider } from './components/FormContext'
 
-function App () {
+function App (): JSX.Element {
   return (
     <div className='App'>
       <h1>Weather App</h1>
