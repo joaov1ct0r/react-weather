@@ -16,7 +16,7 @@ function FormContainer (): JSX.Element {
         name='inputCity'
         data-testid='city-input'
       />
-      <button onClick={handleSearch} type='submit' data-testid='search-button'>
+      <button onClick={() => handleSearch} type='submit' data-testid='search-button'>
         <FiSearch size={20} color='#FFF' />
       </button>
     </div>
