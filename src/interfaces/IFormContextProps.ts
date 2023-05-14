@@ -1,3 +1,3 @@
 export default interface IFormContextProps {
-  children: JSX.Element[] | JSX.Element;
+  children: JSX.Element[] | JSX.Element
 }
